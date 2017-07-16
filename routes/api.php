@@ -15,9 +15,5 @@ use Illuminate\Http\Request;
 
 Route::group(['prefix' => 'api', 'middleware' => 'auth', 'as' => 'api.'], function() {
 
-    Route::get('/websites', [
-        'as'    => 'websites.index',
-        'uses'  => 'WebsiteController@index'
-    ]);
 
 });
