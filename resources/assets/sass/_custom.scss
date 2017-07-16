@@ -1,0 +1,20 @@
+.tag {
+  display: inline-block;
+  padding: .25em .4em .35em;
+  font-size: 75%;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  vertical-align: baseline;
+
+  &.tag-success {
+    background: $brand-success;
+  }
+  &.tag-default {
+    background: $gray-light;
+  }
+  &.tag-danger {
+    background: $brand-danger;
+  }
+}
