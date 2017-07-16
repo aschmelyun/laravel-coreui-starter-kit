@@ -29,16 +29,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function websites()
-    {
-        return $this->hasMany('App\Website');
-    }
-
-    public function notifications()
-    {
-        return $this->hasMany('App\Notification');
-    }
-
     public static function register_rules()
     {
         return [
