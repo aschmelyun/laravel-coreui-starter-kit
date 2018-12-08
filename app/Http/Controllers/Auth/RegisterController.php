@@ -13,8 +13,9 @@ class RegisterController extends Controller
 
     public function index()
     {
-        if(Auth::check())
+        if(Auth::check()){
             return redirect()->route('dashboard.index');
+        }
 
         return view('auth.register', [
             'title' => 'Sign up for an account'
@@ -26,7 +27,7 @@ class RegisterController extends Controller
         $this->validate($request, User::register_rules());
 
         $user = User::create([
-            'email'     => strtolower( trim($request->input('email')) ),
+            'email'     => strtolower(trim($request->input('email')) ),
             'name'      => $request->input('name'),
             'password'  => Hash::make($request->input('password'))
         ]);
