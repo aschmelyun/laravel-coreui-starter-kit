@@ -2,7 +2,7 @@
 <html lang="en">
 @include('common.partials.head')
 
-<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden {{ $body_classes or '' }}">
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden {{ $body_classes ?? '' }}">
 @include('common.partials.header')
 <div class="app-body" id="app">
     <div class="sidebar">

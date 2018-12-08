@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="keyword" content="">
     <link rel="shortcut icon" href="/assets/img/favicon.png">
-    <title>{{ $title or 'Welcome' }} - Your App</title>
+    <title>{{ $title ?? 'Welcome' }} - Your App</title>
     <link href="/assets/css/app.css" rel="stylesheet">
     @yield('head')
 </head>
