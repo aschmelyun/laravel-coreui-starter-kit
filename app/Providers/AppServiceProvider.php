@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('*', function($view){
+        view()->composer('*', function ($view) {
             $view->with('user', Auth::user());
         });
     }

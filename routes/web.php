@@ -16,7 +16,7 @@ Route::get('/', [
     'uses'  => 'PageController@index'
 ]);
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
 
     Route::get('/', [
         'as'    => 'dashboard.index',
@@ -27,5 +27,4 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
         'as'    => 'auth.signout',
         'uses'  => 'Auth\SigninController@signout'
     ]);
-
 });
