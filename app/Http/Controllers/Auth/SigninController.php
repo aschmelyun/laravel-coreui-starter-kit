@@ -12,8 +12,9 @@ class SigninController extends Controller
 
     public function index()
     {
-        if(Auth::check())
+        if (Auth::check()) {
             return redirect()->route('dashboard.index');
+        }
 
         return view('auth.signin', [
             'title' => 'Welcome back'
@@ -29,7 +30,7 @@ class SigninController extends Controller
             'password' => $request->input('password')
         ]);
 
-        if($attempt) {
+        if ($attempt) {
             return redirect()->route('dashboard.index');
         }
 

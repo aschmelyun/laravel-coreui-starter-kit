@@ -13,7 +13,7 @@ class RegisterController extends Controller
 
     public function index()
     {
-        if(Auth::check()){
+        if (Auth::check()) {
             return redirect()->route('dashboard.index');
         }
 
@@ -27,7 +27,7 @@ class RegisterController extends Controller
         $this->validate($request, User::register_rules());
 
         $user = User::create([
-            'email'     => strtolower(trim($request->input('email')) ),
+            'email'     => strtolower(trim($request->input('email'))),
             'name'      => $request->input('name'),
             'password'  => Hash::make($request->input('password'))
         ]);
@@ -37,5 +37,4 @@ class RegisterController extends Controller
         Auth::login($user, true);
         return redirect()->route('dashboard.index');
     }
-
 }
